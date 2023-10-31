@@ -1,1 +1,1 @@
-moe_EntityPronoun = []
+moe_EntityPronoun = ["小項下", "大項下"]
