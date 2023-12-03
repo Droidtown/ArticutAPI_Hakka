@@ -11,10 +11,10 @@ from pprint import pprint
 
 from ArticutAPI import Articut
 try:
-    from .defaultDict import Taigi_Lexicon
+    from .defaultDict import Hakka_Lexicon
     from .posShift import shiftRule
 except:
-    from defaultDict import Taigi_Lexicon
+    from defaultDict import Hakka_Lexicon
     from posShift import shiftRule
 
 BASEPATH = os.path.dirname(os.path.abspath(__file__))
@@ -28,11 +28,11 @@ class ArticutTG:
         self.userDefinedDICT = {}
         self.cjkPAT = re.compile('[\u4e00-\u9fff]')
         self.moeCSV = [[t.replace("\n", "") for t in l.split(",")] for l  in open("{}/defaultDict/moe_dict/詞目總檔.csv".format(BASEPATH), "r", encoding="utf-8").readlines()]
-        self.DT_TL = Taigi_Lexicon.DT_TL
+        #self.DT_TL = Hakka_Lexicon.DT_TL
         self.purgePat = re.compile("</\w+(_\w+)?><\w+(_\w+)?>|</?\w+(_\w+)?>")
         self.shiftRule = shiftRule
-        self.defaultDICT = Taigi_Lexicon.dictCombiner()
-        self.legacyLIST = ["", "𪜶𪹚𫝏𫝘𫝙𫝛𫝞𫝺𫝻𫝾𫞭𫞻𫞼𫟂𫟊𫟧𫠛𫣆"]
+        self.defaultDICT = Hakka_Lexicon.dictCombiner()
+        #self.legacyLIST = []
         self.personPat = re.compile("(?<=<ENTITY_person>)[^<]+(?=</ENTITY_person>)")
     def _pos2Obj(self, posLIST):
         resultLIST = []
@@ -71,8 +71,8 @@ class ArticutTG:
             for word in p:
                 if "LATIN" in unicodedata.name(word["text"][0]):
                     resultLIST.append(word["text"])
-                elif word["text"] in self.DT_TL:
-                    resultLIST.append(self.DT_TL[word["text"]])
+                #elif word["text"] in self.DT_TL:
+                    #resultLIST.append(self.DT_TL[word["text"]])
                 elif word["text"] in [token[2] for token in self.moeCSV]:
                     tokenLIST = []
                     for token in self.moeCSV[1:]:
@@ -216,8 +216,8 @@ class ArticutTG:
         return resultSTR
 
     def parse(self, inputSTR, level="lv2", userDefinedDictFILE=None, convert=None):
-        for i in self.legacyLIST[0]:
-            inputSTR = inputSTR.replace(i, self.legacyLIST[1][self.legacyLIST[0].index(i)])
+        #for i in self.legacyLIST[0]:
+            #inputSTR = inputSTR.replace(i, self.legacyLIST[1][self.legacyLIST[0].index(i)])
 
         if level=="lv3":
             tgLV = "lv3"
