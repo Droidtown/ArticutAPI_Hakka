@@ -5,103 +5,101 @@ import tempfile
 import platform
 
 try:
-    from moe_dict.ACTION_verb import moe_ActionVerb
-    from moe_dict.CLAUSE_particle import moe_ClauseParticle
-    from moe_dict.CLAUSE_Q import moe_ClauseQ
-    from moe_dict.ENTITY_classifier import moe_EntityClassifier
-    from moe_dict.ENTITY_noun import moe_EntityNoun
-    from moe_dict.ENTITY_pronoun import moe_EntityPronoun
-    from moe_dict.FUNC_conjunction import moe_FuncConjunction
-    from moe_dict.FUNC_inner import moe_FuncInner
-    from moe_dict.FUNC_inter import moe_FuncInter
-    from moe_dict.IDIOM import moe_Idiom
-    from moe_dict.LOCATION import moe_Location
-    from moe_dict.MODIFIER import moe_Modifier
-    from moe_dict.RANGE_locality import moe_RangeLocality
-    from moe_dict.TIME_justtime import moe_TimeJusttime
-    from moe_dict.TIME_season import moe_TimeSeason
+    from HAC_dict.xi_ien.pre_elementary_level import ACTION_verb as hac_ActionVerb
+    from HAC_dict.xi_ien.pre_elementary_level import CLAUSE_particle as hac_ClauseParticle
+    from HAC_dict.xi_ien.pre_elementary_level import CLAUSE_Q as hac_ClauseQ
+    from HAC_dict.xi_ien.pre_elementary_level import ENTITY_classifier as hac_EntityClassifier
+    from HAC_dict.xi_ien.pre_elementary_level import ENTITY_noun as hac_EntityNoun
+    from HAC_dict.xi_ien.pre_elementary_level import ENTITY_pronoun as hac_EntityPronoun
+    from HAC_dict.xi_ien.pre_elementary_level import FUNC_conjunction as hac_FuncConjunction
+    from HAC_dict.xi_ien.pre_elementary_level import FUNC_inner as hac_FuncInner
+    from HAC_dict.xi_ien.pre_elementary_level import FUNC_inter as hac_FuncInter
+    from HAC_dict.xi_ien.pre_elementary_level import IDIOM as hac_Idiom
+    from HAC_dict.xi_ien.pre_elementary_level import LOCATION as hac_Location
+    from HAC_dict.xi_ien.pre_elementary_level import MODIFIER as hac_Modifier
+    from HAC_dict.xi_ien.pre_elementary_level import RANGE_locality as hac_RangeLocality
+    from HAC_dict.xi_ien.pre_elementary_level import TIME_justtime as hac_TimeJusttime
+    from HAC_dict.xi_ien.pre_elementary_level import TIME_season as hac_TimeSeason
 
-    from DroidtownTG_dict.ACTION_eventQuantifier import DT_ActionEventQuantifier
-    from DroidtownTG_dict.ACTION_lightVerb import DT_ActionLightVerb
-    from DroidtownTG_dict.ACTION_quantifiedVerb import DT_ActionQuantifiedVerb
-    from DroidtownTG_dict.ACTION_verb import DT_ActionVerb
-    from DroidtownTG_dict.ASPECT import DT_Aspect
-    from DroidtownTG_dict.AUX import DT_Aux
-    from DroidtownTG_dict.CLAUSE_particle import DT_ClauseParticle
-    from DroidtownTG_dict.CLAUSE_Q import DT_ClauseQ
-    from DroidtownTG_dict.ENTITY_classifier import DT_EntityClassifier
-    from DroidtownTG_dict.ENTITY_DetPhrase import DT_EntityDetPhrase
-    from DroidtownTG_dict.ENTITY_measurement import DT_EntityMeasurement
-    from DroidtownTG_dict.ENTITY_noun import DT_EntityNoun
-    from DroidtownTG_dict.ENTITY_num import DT_EntityNum
-    from DroidtownTG_dict.ENTITY_person import DT_EntityPerson
-    from DroidtownTG_dict.ENTITY_possessive import DT_EntityPossessive
-    from DroidtownTG_dict.ENTITY_pronoun import DT_EntityPronoun
-    from DroidtownTG_dict.FUNC_degreeHead import DT_FuncDegreeHead
-    from DroidtownTG_dict.FUNC_inner import DT_FuncInner
-    from DroidtownTG_dict.FUNC_inter import DT_FuncInter
-    from DroidtownTG_dict.FUNC_negation import DT_FuncNegation
-    from DroidtownTG_dict.FUNC_conjunction import DT_FuncConjunction
-    from DroidtownTG_dict.IDIOM import DT_Idiom
-    from DroidtownTG_dict.LOCATION import DT_Location
-    from DroidtownTG_dict.TIME_justtime import DT_TimeJusttime
-    from DroidtownTG_dict.MODAL import DT_Modal
-    from DroidtownTG_dict.MODIFIER import DT_Modifier
-    from DroidtownTG_dict.MODIFIER_color import DT_ModifierColor
-    from DroidtownTG_dict.QUANTIFIER import DT_Quantifier
-    from DroidtownTG_dict.RANGE_period import DT_RangePeriod
-    from DroidtownTG_dict.RANGE_period import DT_RangeLocality
+    from IreneHAKKA_dict.ACTION_eventQuantifier import DT_ActionEventQuantifier
+    from IreneHAKKA_dict.ACTION_lightVerb import DT_ActionLightVerb
+    from IreneHAKKA_dict.ACTION_quantifiedVerb import DT_ActionQuantifiedVerb
+    from IreneHAKKA_dict.ACTION_verb import DT_ActionVerb
+    from IreneHAKKA_dict.ASPECT import DT_Aspect
+    from IreneHAKKA_dict.AUX import DT_Aux
+    from IreneHAKKA_dict.CLAUSE_particle import DT_ClauseParticle
+    from IreneHAKKA_dict.CLAUSE_Q import DT_ClauseQ
+    from IreneHAKKA_dict.ENTITY_classifier import DT_EntityClassifier
+    from IreneHAKKA_dict.ENTITY_DetPhrase import DT_EntityDetPhrase
+    from IreneHAKKA_dict.ENTITY_measurement import DT_EntityMeasurement
+    from IreneHAKKA_dict.ENTITY_noun import DT_EntityNoun
+    from IreneHAKKA_dict.ENTITY_num import DT_EntityNum
+    from IreneHAKKA_dict.ENTITY_person import DT_EntityPerson
+    from IreneHAKKA_dict.ENTITY_possessive import DT_EntityPossessive
+    from IreneHAKKA_dict.ENTITY_pronoun import DT_EntityPronoun
+    from IreneHAKKA_dict.FUNC_degreeHead import DT_FuncDegreeHead
+    from IreneHAKKA_dict.FUNC_inner import DT_FuncInner
+    from IreneHAKKA_dict.FUNC_inter import DT_FuncInter
+    from IreneHAKKA_dict.FUNC_negation import DT_FuncNegation
+    from IreneHAKKA_dict.FUNC_conjunction import DT_FuncConjunction
+    from IreneHAKKA_dict.IDIOM import DT_Idiom
+    from IreneHAKKA_dict.LOCATION import DT_Location
+    from IreneHAKKA_dict.TIME_justtime import DT_TimeJusttime
+    from IreneHAKKA_dict.MODAL import DT_Modal
+    from IreneHAKKA_dict.MODIFIER import DT_Modifier
+    from IreneHAKKA_dict.MODIFIER_color import DT_ModifierColor
+    from IreneHAKKA_dict.QUANTIFIER import DT_Quantifier
+    from IreneHAKKA_dict.RANGE_period import DT_RangePeriod
+    from IreneHAKKA_dict.RANGE_Locality import DT_RangeLocality
 
-    from DroidtownTG_dict.toTL import DT_TL
 except:
-    from .moe_dict.ACTION_verb import moe_ActionVerb
-    from .moe_dict.CLAUSE_particle import moe_ClauseParticle
-    from .moe_dict.CLAUSE_Q import moe_ClauseQ
-    from .moe_dict.ENTITY_classifier import moe_EntityClassifier
-    from .moe_dict.ENTITY_noun import moe_EntityNoun
-    from .moe_dict.ENTITY_pronoun import moe_EntityPronoun
-    from .moe_dict.FUNC_conjunction import moe_FuncConjunction
-    from .moe_dict.FUNC_inner import moe_FuncInner
-    from .moe_dict.FUNC_inter import moe_FuncInter
-    from .moe_dict.IDIOM import moe_Idiom
-    from .moe_dict.LOCATION import moe_Location
-    from .moe_dict.MODIFIER import moe_Modifier
-    from .moe_dict.RANGE_locality import moe_RangeLocality
-    from .moe_dict.TIME_justtime import moe_TimeJusttime
-    from .moe_dict.TIME_season import moe_TimeSeason
+    from .HAC_dict.xi_ien.pre_elementary_level import ACTION_verb as hac_ActionVerb
+    from .HAC_dict.xi_ien.pre_elementary_level import CLAUSE_particle as hac_ClauseParticle
+    from .HAC_dict.xi_ien.pre_elementary_level import CLAUSE_Q as hac_ClauseQ
+    from .HAC_dict.xi_ien.pre_elementary_level import ENTITY_classifier as hac_EntityClassifier
+    from .HAC_dict.xi_ien.pre_elementary_level import ENTITY_noun as hac_EntityNoun
+    from .HAC_dict.xi_ien.pre_elementary_level import ENTITY_pronoun as hac_EntityPronoun
+    from .HAC_dict.xi_ien.pre_elementary_level import FUNC_conjunction as hac_FuncConjunction
+    from .HAC_dict.xi_ien.pre_elementary_level import FUNC_inner as hac_FuncInner
+    from .HAC_dict.xi_ien.pre_elementary_level import FUNC_inter as hac_FuncInter
+    from .HAC_dict.xi_ien.pre_elementary_level import IDIOM as hac_Idiom
+    from .HAC_dict.xi_ien.pre_elementary_level import LOCATION as hac_Location
+    from .HAC_dict.xi_ien.pre_elementary_level import MODIFIER as hac_Modifier
+    from .HAC_dict.xi_ien.pre_elementary_level import RANGE_locality as hac_RangeLocality
+    from .HAC_dict.xi_ien.pre_elementary_level import TIME_justtime as hac_TimeJusttime
+    from .HAC_dict.xi_ien.pre_elementary_level import TIME_season as hac_TimeSeason
 
-    from .DroidtownTG_dict.ACTION_eventQuantifier import DT_ActionEventQuantifier
-    from .DroidtownTG_dict.ACTION_lightVerb import DT_ActionLightVerb
-    from .DroidtownTG_dict.ACTION_quantifiedVerb import DT_ActionQuantifiedVerb
-    from .DroidtownTG_dict.ACTION_verb import DT_ActionVerb
-    from .DroidtownTG_dict.ASPECT import DT_Aspect
-    from .DroidtownTG_dict.AUX import DT_Aux
-    from .DroidtownTG_dict.CLAUSE_particle import DT_ClauseParticle
-    from .DroidtownTG_dict.CLAUSE_Q import DT_ClauseQ
-    from .DroidtownTG_dict.ENTITY_classifier import DT_EntityClassifier
-    from .DroidtownTG_dict.ENTITY_DetPhrase import DT_EntityDetPhrase
-    from .DroidtownTG_dict.ENTITY_measurement import DT_EntityMeasurement
-    from .DroidtownTG_dict.ENTITY_noun import DT_EntityNoun
-    from .DroidtownTG_dict.ENTITY_num import DT_EntityNum
-    from .DroidtownTG_dict.ENTITY_person import DT_EntityPerson
-    from .DroidtownTG_dict.ENTITY_possessive import DT_EntityPossessive
-    from .DroidtownTG_dict.ENTITY_pronoun import DT_EntityPronoun
-    from .DroidtownTG_dict.FUNC_degreeHead import DT_FuncDegreeHead
-    from .DroidtownTG_dict.FUNC_inner import DT_FuncInner
-    from .DroidtownTG_dict.FUNC_inter import DT_FuncInter
-    from .DroidtownTG_dict.FUNC_negation import DT_FuncNegation
-    from .DroidtownTG_dict.FUNC_conjunction import DT_FuncConjunction
-    from .DroidtownTG_dict.IDIOM import DT_Idiom
-    from .DroidtownTG_dict.LOCATION import DT_Location
-    from .DroidtownTG_dict.TIME_justtime import DT_TimeJusttime
-    from .DroidtownTG_dict.MODAL import DT_Modal
-    from .DroidtownTG_dict.MODIFIER import DT_Modifier
-    from .DroidtownTG_dict.MODIFIER_color import DT_ModifierColor
-    from .DroidtownTG_dict.QUANTIFIER import DT_Quantifier
-    from .DroidtownTG_dict.RANGE_period import DT_RangePeriod
-    from .DroidtownTG_dict.RANGE_period import DT_RangeLocality
+    from .IreneHAKKA_dict.ACTION_eventQuantifier import DT_ActionEventQuantifier
+    from .IreneHAKKA_dict.ACTION_lightVerb import DT_ActionLightVerb
+    from .IreneHAKKA_dict.ACTION_quantifiedVerb import DT_ActionQuantifiedVerb
+    from .IreneHAKKA_dict.ACTION_verb import DT_ActionVerb
+    from .IreneHAKKA_dict.ASPECT import DT_Aspect
+    from .IreneHAKKA_dict.AUX import DT_Aux
+    from .IreneHAKKA_dict.CLAUSE_particle import DT_ClauseParticle
+    from .IreneHAKKA_dict.CLAUSE_Q import DT_ClauseQ
+    from .IreneHAKKA_dict.ENTITY_classifier import DT_EntityClassifier
+    from .IreneHAKKA_dict.ENTITY_DetPhrase import DT_EntityDetPhrase
+    from .IreneHAKKA_dict.ENTITY_measurement import DT_EntityMeasurement
+    from .IreneHAKKA_dict.ENTITY_noun import DT_EntityNoun
+    from .IreneHAKKA_dict.ENTITY_num import DT_EntityNum
+    from .IreneHAKKA_dict.ENTITY_person import DT_EntityPerson
+    from .IreneHAKKA_dict.ENTITY_possessive import DT_EntityPossessive
+    from .IreneHAKKA_dict.ENTITY_pronoun import DT_EntityPronoun
+    from .IreneHAKKA_dict.FUNC_degreeHead import DT_FuncDegreeHead
+    from .IreneHAKKA_dict.FUNC_inner import DT_FuncInner
+    from .IreneHAKKA_dict.FUNC_inter import DT_FuncInter
+    from .IreneHAKKA_dict.FUNC_negation import DT_FuncNegation
+    from .IreneHAKKA_dict.FUNC_conjunction import DT_FuncConjunction
+    from .IreneHAKKA_dict.IDIOM import DT_Idiom
+    from .IreneHAKKA_dict.LOCATION import DT_Location
+    from .IreneHAKKA_dict.TIME_justtime import DT_TimeJusttime
+    from .IreneHAKKA_dict.MODAL import DT_Modal
+    from .IreneHAKKA_dict.MODIFIER import DT_Modifier
+    from .IreneHAKKA_dict.MODIFIER_color import DT_ModifierColor
+    from .IreneHAKKA_dict.QUANTIFIER import DT_Quantifier
+    from .IreneHAKKA_dict.RANGE_period import DT_RangePeriod
+    from .IreneHAKKA_dict.RANGE_locality import DT_RangeLocality
 
-    from .DroidtownTG_dict.toTL import DT_TL
 
 def dictCombiner():
     '''
@@ -141,21 +139,21 @@ def dictCombiner():
                     "TIME_season"           : None
                     }
 
-    moeDICT = {"ACTION_verb"      : moe_ActionVerb,
-               "CLAUSE_particle"  : moe_ClauseParticle,
-               "CLAUSE_Q"         : moe_ClauseQ,
-               "ENTITY_classifier": moe_EntityClassifier,
-               "ENTITY_noun"      : moe_EntityNoun,
-               "ENTITY_pronoun"   : moe_EntityPronoun,
-               "FUNC_conjunction" : moe_FuncConjunction,
-               "FUNC_inner"       : moe_FuncInner,
-               "FUNC_inter"       : moe_FuncInter,
-               "IDIOM"            : moe_Idiom,
-               "LOCATION"         : moe_Location,
-               "MODIFIER"         : moe_Modifier,
-               "RANGE_locality"   : moe_RangeLocality,
-               "TIME_justtime"    : moe_TimeJusttime,
-               "TIME_season"      : moe_TimeSeason
+    hacDICT = {"ACTION_verb"      : hac_ActionVerb,
+               "CLAUSE_particle"  : hac_ClauseParticle,
+               "CLAUSE_Q"         : hac_ClauseQ,
+               "ENTITY_classifier": hac_EntityClassifier,
+               "ENTITY_noun"      : hac_EntityNoun,
+               "ENTITY_pronoun"   : hac_EntityPronoun,
+               "FUNC_conjunction" : hac_FuncConjunction,
+               "FUNC_inner"       : hac_FuncInner,
+               "FUNC_inter"       : hac_FuncInter,
+               "IDIOM"            : hac_Idiom,
+               "LOCATION"         : hac_Location,
+               "MODIFIER"         : hac_Modifier,
+               "RANGE_locality"   : hac_RangeLocality,
+               "TIME_justtime"    : hac_TimeJusttime,
+               "TIME_season"      : hac_TimeSeason
     }
 
     DTDICT = {"ACTION_verb"           : DT_ActionVerb,
@@ -193,7 +191,7 @@ def dictCombiner():
 
     for POS in combinedDICT.keys():
         try:
-            tmpLIST = moeDICT[POS]
+            tmpLIST = hacDICT[POS]
             for k in DTDICT.keys():
                 tmpLIST = list(set(tmpLIST)-set(DTDICT[k]))
             if POS in DTDICT.keys():
