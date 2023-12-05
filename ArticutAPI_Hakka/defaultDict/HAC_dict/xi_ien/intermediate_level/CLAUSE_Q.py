@@ -1,1 +1,1 @@
-moe_ClauseQ = []
+moe_ClauseQ = ["曾有", "敢有"]
