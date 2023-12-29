@@ -1,4 +1,4 @@
-DT_FuncNegation = ["毋",
+hac_FuncNegation = ["毋",
                     "無",
                     "毋使",
                     "吂",

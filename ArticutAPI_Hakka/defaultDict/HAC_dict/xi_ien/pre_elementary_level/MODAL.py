@@ -1,1 +1,1 @@
-DT_Modal = ["可能"]
+hac_Modal = ["可能"]

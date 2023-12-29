@@ -1,4 +1,4 @@
-moe_EntityClassifier = ["杯",
+hac_EntityClassifier = ["杯",
                         "本",
                         "點",
                         "時",

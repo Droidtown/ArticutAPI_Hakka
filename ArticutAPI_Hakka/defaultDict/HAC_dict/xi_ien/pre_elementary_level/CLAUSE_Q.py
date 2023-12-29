@@ -1,1 +1,1 @@
-moe_ClauseQ = ["哪久","做麼个"]
+hac_ClauseQ = ["哪久","做麼个"]

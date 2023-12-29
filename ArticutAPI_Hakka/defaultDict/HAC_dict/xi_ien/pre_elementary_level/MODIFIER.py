@@ -1,4 +1,4 @@
-moe_Modifier = ["緊張",
+hac_Modifier = ["緊張",
                 "都",
                 "還係",
                 "也",

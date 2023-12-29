@@ -1,1 +1,1 @@
-moe_FuncDeterminer = ["該", "這"]
+hac_FuncDeterminer = ["該", "這"]

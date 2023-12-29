@@ -1,4 +1,4 @@
-moe_TimeJusttime = ["禮拜",
+hac_TimeJusttime = ["禮拜",
                     "年",
                     "拜",
                     "這下",
