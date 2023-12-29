@@ -296,7 +296,7 @@ if __name__ == "__main__":
     accountDICT = {"username":accountDICT["username"], "apikey":accountDICT["apikey"]}
     articutHakka = ArticutHKK(username=accountDICT["username"], apikey=accountDICT["apikey"])
     #客語漢字 CWS/POS TEST
-    inputSTR = "你ē-sái請ta̍k-ke提供字句hō͘你做這個試驗。"
+    inputSTR = "佢轉來个時節歸身汗，就遽遽去洗身腳"
 
     resultDICT = articutHakka.parse(inputSTR, level="lv2")
     pprint(resultDICT)

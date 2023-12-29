@@ -138,7 +138,7 @@ def dictCombiner():
                     "TIME_justtime"         : None,
                     "TIME_season"           : None
                     }
-    print(hac_ActionVerb)
+
     hacDICT = {"ACTION_verb"      : hac_ActionVerb,
                "CLAUSE_particle"  : hac_ClauseParticle,
                "CLAUSE_Q"         : hac_ClauseQ,
