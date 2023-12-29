@@ -19,7 +19,7 @@ except:
 
 BASEPATH = os.path.dirname(os.path.abspath(__file__))
 
-class ArticutTG:
+class ArticutHKK:
     def __init__(self, username="", apikey="", usernameENG="", apikeyENG=""):
         self.articut = Articut(username=username, apikey=apikey)
         self.articutENG = Articut(username=usernameENG, apikey=apikeyENG, url="https://nlu.droidtown.co")
@@ -27,7 +27,7 @@ class ArticutTG:
         self.TLPat = re.compile("\s?[\-a-zA-Záíúéóàìùèòâîûêôǎǐǔěǒāīūēō̋̍]+(-+[a-zA-Záíúéóàìùèòâîûêôǎǐǔěǒāīūēō̋̍]+)*\s?")
         self.userDefinedDICT = {}
         self.cjkPAT = re.compile('[\u4e00-\u9fff]')
-        self.moeCSV = [[t.replace("\n", "") for t in l.split(",")] for l  in open("{}/defaultDict/moe_dict/詞目總檔.csv".format(BASEPATH), "r", encoding="utf-8").readlines()]
+        #self.moeCSV = [[t.replace("\n", "") for t in l.split(",")] for l  in open("{}/defaultDict/moe_dict/詞目總檔.csv".format(BASEPATH), "r", encoding="utf-8").readlines()]
         #self.DT_TL = Hakka_Lexicon.DT_TL
         self.purgePat = re.compile("</\w+(_\w+)?><\w+(_\w+)?>|</?\w+(_\w+)?>")
         self.shiftRule = shiftRule
@@ -105,35 +105,7 @@ class ArticutTG:
                     resultLIST.append("-".join(wordLIST))
         return resultLIST
 
-#<ToDo>
-    #def _2POJ(self, postLIST):
-        #'''
-        #把 posLIST 裡的每一個詞，一一轉為 POJ (白話字拼音)
-        #'''
-        #resultLIST = []
-        #return resultLIST
 
-    #def _2Word(self, posLIST):
-        #'''
-        #每次從 posLIST 中取一個詞彙，反查這個詞彙是 TL 或 POS 的拼音，依該拼音把同音詞彙找出來，並把這個詞彙同音的台語漢字加入回傳結果中。
-        #'''
-        #resultLIST = []
-        #return resultLIST
-
-    #def _TL2Word(self, TLLIST):
-        #'''
-        #把 TLLIST (台羅拼音)裡的每一個詞，一一轉為台語漢字
-        #'''
-        #resultLIST = []
-        #return resultLIST
-
-    #def _POJ2Word(self, POJLIST):
-        #'''
-        #把 POJLIST (白話字拼音)裡的每一個詞，一一轉為台語漢字
-        #'''
-        #resultLIST = []
-        #return resultLIST
-#</ToDo>
     def _mixedInputDetector(self, inputSTR):
         TLLIST = [t.group() for t in self.TLPat.finditer(inputSTR)]
         with open(self.TaigiDictFILE.name) as f:
@@ -322,109 +294,9 @@ if __name__ == "__main__":
         accountDICT = {"username":"", "apikey":""}
 
     accountDICT = {"username":accountDICT["username"], "apikey":accountDICT["apikey"]}
-    articutTaigi = ArticutTG(username=accountDICT["username"], apikey=accountDICT["apikey"])
-    #台語漢字 CWS/POS TEST
+    articutHakka = ArticutHKK(username=accountDICT["username"], apikey=accountDICT["apikey"])
+    #客語漢字 CWS/POS TEST
     inputSTR = "你ē-sái請ta̍k-ke提供字句hō͘你做這個試驗。"
-    inputSTR = "跋倒, 佮意"
-    inputSTR = "伊誠𠢕激五仁，激甲逐家笑咍咍".replace("。", "")
 
-    inputLIST = [
-        "糋好的芋仔糋欲食進前愛閣乍一下",
-        "你看我穿按呢敢好？",
-        "欲買的衫揀好矣未？我欲來去納錢矣喔！",
-        "鹽一撮仔就好矣",
-        "親情條直好唯是，聘金濟少由在伊",
-        "阿公那挨二絃那唸歌，足好聽的",
-        "閣來就是寒人矣，寒衫愛先準備予好",
-        "伊一定是頂世人燒好香，才會娶著遮爾好的某",
-        "病好離離",
-        "以前的人對屎礐仔舀屎尿起來，囥予伊發酵過，變做大肥，就聽好沃菜",
-        "這鼎肉我滷規下晡，保證好食",
-        "醬瓜仔配糜真好食，毋過毋好食傷濟",
-        "過年時仔，人攏會講幾句仔好話",
-        "今仔日天氣無好，你出門的時愛會記得紮雨幔",
-        "伊昨昏都有較好矣，是按怎今仔日閣反症？",
-        "感冒猶未好，毋通出去剾風",
-        "咱七月半普渡彼工，菜碗著攢較腥臊咧，來拜好兄弟仔",
-        "雖然我佮恁阿爸平歲，毋過論輩無論歲，咱算仝沿的，叫我阿兄就好",
-        "你直接提去予伊毋就好矣，哪著閣用寄的？",
-        "囡仔人無規矩真正毋是款，無好好仔管教袂使得",
-        "印彩色的加真傷本，印烏白的就好",
-        "今仔日誠好日，幾若口灶咧嫁娶",
-        "病若欲緊好，無噤喙是袂用得",
-        "番薯𠢕湠根，真好種",
-        "好得無去，無，煞加走一逝",
-        "錢絞錢，才好趁",
-        "這條提案逐家已經討論好勢，紲落來咱就來表決",
-        "代誌欲對佗位落手才好？",
-        "這是我親手做的，做了毋是真好，請你毋通棄嫌",
-        "伊舊年考無牢，今年閣考，考了真好",
-        "看伊滿面春風，一定有啥物好代誌",
-        "拄著歹人客來咧花，咱雖然氣暢忍，嘛著好禮仔共伊安搭",
-        "物件愛收予好，欲用的時才袂揣無",
-        "煙腸用烘的較好食",
-        "幼秀跤好命底",
-        #"你胃腸無好，涼的毋通食傷濟",
-        "家己管教好，毋驚別人來稽考",
-        "你的身體愛好好仔調養",
-        "伊做人真好",
-        "好好仔招呼老主顧",
-        "伊講欲請我食好料的，真正是卯死矣！",
-        "兩人的私交誠好",
-        "真久無見面矣，高夫人最近好無？",
-        "你家己愛好好仔保重",
-        "彼幾箱物件囥佇車後斗就好矣",
-        "伊的數學程度真好，雖然才讀國中，高中的數學嘛攏會曉",
-        "阿美翁真靠俗，真好鬥陣",
-        "伊甘願四界流浪，毋肯好好仔揣頭路",
-        "你欲去無？好啊！",
-        "做人若知足，日子就會較好過",
-        "伊怨妒別人比伊較好額",
-        "時鐘修理好矣",
-        "出業揣無頭路，只好暫時去做臨時工",
-        "這是好代，趕緊講予眾人知",
-        "網仔門破去矣，會走蠓仔入來，愛緊修理予好",
-        "嬰仔毋好予伊睏坦覆",
-        "關稅減輕，生理有較好做",
-        "你有啥物好的建議無？",
-        "備辦好勢",
-        "這款蘭花真貴氣，無好種",
-        "咱著教囡仔，去便所了後，挩鍊仔著愛挩予好勢",
-        "人講：「驚某大丈夫，拍某豬狗牛。」你著愛好好仔疼惜恁牽手才著",
-        "夠月欲生矣，準備好未？",
-        "無大條番薯通炰，炰番薯仔囝嘛好",
-        "伊做人痟痟，真好鬥陣",
-        "像這款大寒的天，食一寡燒的上好",
-        "勸人做好代，較贏食早齋",
-        "這个囡仔四個月爾爾就真硬插，足好抱",
-        "頭拄才洗好，膨獅獅",
-        "大家官來，你愛好好仔款待",
-        "用頭毛鋏仔共頭毛鋏予伊好",
-        "伊怨慼家己真歹命，無通好好仔讀冊",
-        "你的手愛扞予伊好，才袂跋倒",
-        "無奈何，只好去揣阿伯鬥相共",
-        "人講順風就好駛船",
-        "這層代誌予你主意就好",
-        "今年的收成真好",
-        "相罵無好喙",
-        "一切攏就你的意思，按呢好無？",
-        "伊攏是靠橫財才會遐好額",
-        "誠歹勢，我無拄好煞共恁的玻璃杯仔摃破去",
-        "電話的線路接了無好",
-        "欲做學問，起頭著愛共基礎拍予伊好",
-        "伊遐貪心會無好尾",
-        "伊駛車去共人挵著，煞做伊閬港，好佳哉尾仔有佮人和解，法官才予伊寄罪",
-        "頭家，豬肉較好份的切一塊予我",
-
-        "無，恁兩个相換好矣，伊徛頭前，你徛後壁",
-        "歡歡喜喜會較好過日",
-        "車斗有張升降尾門，較好起落貨",
-        "正月正時，愛講一寡好吉兆的話",
-        #"烏白罵人是毋好的代誌",
-    ]
-
-    for inputSTR in inputLIST:
-        #inputSTR = "你莫一直掠人金金看！".replace("。", "")
-        resultDICT = articutTaigi.parse(inputSTR, level="lv2")
-        pprint(resultDICT)
-    #<ENTITY_pronoun>[^<]+</ENTITY_pronoun>(<FUNC_inner>[^<]+</FUNC_inner>)?<ENTITY_noun>[^<]+</ENTITY_noun><DegreeP>[^<]+</DegreeP>
+    resultDICT = articutHakka.parse(inputSTR, level="lv2")
+    pprint(resultDICT)
