@@ -1,0 +1,1 @@
+hac_Quantifier = ["各各",]
