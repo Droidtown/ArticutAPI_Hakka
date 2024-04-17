@@ -1,0 +1,1 @@
+hac_EntityNum = ["一", "二"]

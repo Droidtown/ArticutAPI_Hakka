@@ -1,6 +1,4 @@
-moe_EntityClassifier = ["耗爽",
-                        "月半邊仔",
-                        "板",
+moe_EntityClassifier = ["板",
                         "髀",
                         "座",
                         "齣",
@@ -24,4 +22,5 @@ moe_EntityClassifier = ["耗爽",
                         "扇",
                         "胎",
                         "廂",
-                        "燭"]
+                        "燭",
+                        "抓"]

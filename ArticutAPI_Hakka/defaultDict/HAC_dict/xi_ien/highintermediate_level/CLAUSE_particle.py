@@ -1,1 +1,1 @@
-moe_ClauseParticle = []
+moe_ClauseParticle = ["哩", "吔", "啊"]

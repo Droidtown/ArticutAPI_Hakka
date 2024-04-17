@@ -1,1 +1,1 @@
-DT_FuncNegation = ["莫", "毋", "毋使", "吂使",]
+DT_FuncNegation = ["莫", "毋"]

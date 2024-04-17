@@ -1,1 +1,1 @@
-hac_FuncDeterminer = ["這"]
+hac_FuncDeterminer = ["這", "該"]

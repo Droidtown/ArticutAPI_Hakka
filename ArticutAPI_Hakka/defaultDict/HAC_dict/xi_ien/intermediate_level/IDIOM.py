@@ -1,1 +1,1 @@
-moe_Idiom = ["總有"]
+moe_Idiom = []
