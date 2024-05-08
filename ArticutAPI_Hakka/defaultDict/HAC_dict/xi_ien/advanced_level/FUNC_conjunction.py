@@ -1,1 +1,1 @@
-moe_FuncConjunction = []
+moe_FuncConjunction = ["合",]

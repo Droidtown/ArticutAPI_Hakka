@@ -1,0 +1,1 @@
+DT_FuncNegation = ["毋", "無", "吂",]

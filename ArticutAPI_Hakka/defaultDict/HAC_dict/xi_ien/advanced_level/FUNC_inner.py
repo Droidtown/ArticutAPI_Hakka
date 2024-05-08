@@ -1,1 +1,1 @@
-moe_FuncInner = []
+moe_FuncInner = ["仔","个", "加勢",]

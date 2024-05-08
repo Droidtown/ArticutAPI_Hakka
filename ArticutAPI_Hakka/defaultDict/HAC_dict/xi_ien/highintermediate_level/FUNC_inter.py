@@ -1,1 +1,1 @@
-moe_FuncInter = ["下後", "任在",]
+moe_FuncInter = ["下後", "任在"]
