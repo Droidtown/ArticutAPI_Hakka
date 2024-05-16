@@ -296,7 +296,22 @@ if __name__ == "__main__":
     accountDICT = {"username":accountDICT["username"], "apikey":accountDICT["apikey"]}
     articutHakka = ArticutHKK(username=accountDICT["username"], apikey=accountDICT["apikey"])
     #客語漢字 CWS/POS TEST
-    inputSTR = "佢轉來个時節歸身汗，就遽遽去洗身腳"
+    inputSTR = "歸日仔頭那痛。"
+    #"佢轉來个時節歸身汗，就遽遽去洗身腳"
+    #"略略仔發燒。"
+    #"做護理師，愛有耐心。"
+    #"醫院在車頭附近。"
+    #"先生開个藥仔，愛記得照時間食。"
+    #"這菜無洩藥仔，做得安心食。"
+    #"這菜無射藥仔，做得安心食。"
+    #"今晡日先生無同人看病。"
+    #"洗好身，試著當鬆爽。"
+    #"洗好身，感覺著蓋鬆爽。"
+    #"佢人毋鬆爽，今晡日愛請假。"
+    #"老弟想屙尿，緊尋便所。"
+    #"佢去便所屙屎，你愛等一下仔無？"
+    #"佢毋知食恁多麼个，打个屁當臭。"
+    #"佢毋知食恁多麼个，打个屁卵蓋臭。"
 
     resultDICT = articutHakka.parse(inputSTR, level="lv2")
     pprint(resultDICT)
