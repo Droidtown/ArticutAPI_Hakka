@@ -1,1 +1,2 @@
-DT_ModifierColor = []
+DT_ModifierColor = ["烏金",
+                    "紅"]

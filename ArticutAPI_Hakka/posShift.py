@@ -16,10 +16,15 @@ shiftRule =[
     (re.compile("<ACTION_verb>請</ACTION_verb><MODIFIER>假</MODIFIER>"),("<ACTION_verb>請</ACTION_verb><MODIFIER>假</MODIFIER>",), ("<ACTION_verb>請假</ACTION_verb>",)),
     (re.compile("<MODIFIER>當</MODIFIER><MODIFIER>[^<]+</MODIFIER>"),("</MODIFIER><MODIFIER>","MODIFIER"), ("", "DegreeP")),
     (re.compile("<MODIFIER>蓋</MODIFIER><MODIFIER>[^<]+</MODIFIER>"),("</MODIFIER><MODIFIER>","MODIFIER"), ("", "DegreeP")),
-    (re.compile("<ACTION_verb>緊尋</ACTION_verb>"),("<ACTION_verb>緊尋</ACTION_verb>",), ("<MODIFIER>緊</MODIFIER><ACTION_verb>尋</ACTION_verb>",)),
+    (re.compile("<ACTION_verb>緊尋</ACTION_verb>"),("<ACTION_verb>緊尋</ACTION_verb>",), ("<TIME_justtime>緊</TIME_justtime><ACTION_verb>尋</ACTION_verb>",)),
     (re.compile("<ENTITY_num>一</ENTITY_num><ENTITY_classifier>下</ENTITY_classifier><ENTITY_oov>仔</ENTITY_oov>"),("<ENTITY_num>一</ENTITY_num><ENTITY_classifier>下</ENTITY_classifier><ENTITY_oov>仔</ENTITY_oov>",),("<TIME_justtime>一下仔</TIME_justtime>",)),
     (re.compile("<FUNC_negation>無</FUNC_negation>$"),("FUNC_negation",),("CLAUSE_Q",)),
     (re.compile("<MODIFIER>恁</MODIFIER><MODIFIER>[^<]+</MODIFIER>"),("</MODIFIER><MODIFIER>","MODIFIER"), ("", "DegreeP")),
-
-
+    (re.compile("<ENTITY_classifier>日</ENTITY_classifier><ENTITY_oov>仔</ENTITY_oov>"),("<ENTITY_classifier>日</ENTITY_classifier><ENTITY_oov>仔</ENTITY_oov>",),("<ENTITY_noun>日仔</ENTITY_noun>",)),
+    (re.compile("</MODIFIER_color><MODIFIER_color>"), ("</MODIFIER_color><MODIFIER_color>",), ("",)),
+    (re.compile("<ENTITY_noun>花</ENTITY_noun><ENTITY_noun>花</ENTITY_noun>"),("<ENTITY_noun>花</ENTITY_noun><ENTITY_noun>花</ENTITY_noun>",),("<MODIFIER>花花</MODIFIER>",)),
+    (re.compile("<ACTION_verb>緊跌</ACTION_verb>"),("<ACTION_verb>緊跌</ACTION_verb>",), ("<TIME_justtime>緊</TIME_justtime><ACTION_verb>跌</ACTION_verb>",)),
+    (re.compile("<ACTION_quantifiedVerb>塞塞</ACTION_quantifiedVerb>"),("<ACTION_quantifiedVerb>塞塞</ACTION_quantifiedVerb>",), ("<MODIFIER>塞塞</MODIFIER>",)),
+    (re.compile("<ENTITY_oov>靚</ENTITY_oov>"),("ENTITY_oov",),("MODIFIER",)),
+    (re.compile("<MODIFIER>還</MODIFIER><MODIFIER>[^<]+</MODIFIER>"),("</MODIFIER><MODIFIER>","MODIFIER"), ("", "DegreeP")),
 ]
