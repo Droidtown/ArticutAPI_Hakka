@@ -1,1 +1,2 @@
-DT_FuncDegreeHead = []
+DT_FuncDegreeHead = ["較",
+                     "過"]

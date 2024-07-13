@@ -1,1 +1,1 @@
-DT_EntityNoun = []
+DT_EntityNoun = ["嬰兒仔"]

@@ -288,7 +288,7 @@ class ArticutHKK:
 
 if __name__ == "__main__":
     try:
-        with open("../account.info", encoding="utf-8") as jF:
+        with open("./account.info", encoding="utf-8") as jF:
             accountDICT = json.load(jF)
     except:
         accountDICT = {"username":"", "apikey":""}
@@ -296,7 +296,7 @@ if __name__ == "__main__":
     accountDICT = {"username":accountDICT["username"], "apikey":accountDICT["apikey"]}
     articutHakka = ArticutHKK(username=accountDICT["username"], apikey=accountDICT["apikey"])
     #客語漢字 CWS/POS TEST
-    inputSTR = "佢耳公聾聾，你講話愛較大聲兜仔。"
+    inputSTR = "阿爸牽等吾个手"
     #"佢轉來个時節歸身汗，就遽遽去洗身腳"
     #"略略仔發燒。"
     #"做護理師，愛有耐心。"
@@ -318,7 +318,13 @@ if __name__ == "__main__":
     #"老吔！目珠花花。"
     #"講佢兩句，就目汁緊跌。"
     #"鼻公塞塞。"
-    
+    #"佢耳公聾聾，你講話愛較大聲兜仔。"
+    #"佢耳公聾聾，你講話愛過大聲一息。"
+    #"牙齒痛，愛去分先生看。"
+    #"嬰兒仔正生牙齒。"
+    #"朝晨䟘起來愛洗嘴洗面。"
+    #"試著肩頭硬硬樣仔。"
+    #"阿爸牽等吾个手。"
     
 
     resultDICT = articutHakka.parse(inputSTR, level="lv2")
