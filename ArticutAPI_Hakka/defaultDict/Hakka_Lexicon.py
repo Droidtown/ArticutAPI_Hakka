@@ -5,21 +5,37 @@ import tempfile
 import platform
 
 try:
-    from HAC_dict.xi_ien.pre_elementary_level import ACTION_verb as hac_ActionVerb
-    from HAC_dict.xi_ien.pre_elementary_level import CLAUSE_particle as hac_ClauseParticle
-    from HAC_dict.xi_ien.pre_elementary_level import CLAUSE_Q as hac_ClauseQ
-    from HAC_dict.xi_ien.pre_elementary_level import ENTITY_classifier as hac_EntityClassifier
-    from HAC_dict.xi_ien.pre_elementary_level import ENTITY_noun as hac_EntityNoun
-    from HAC_dict.xi_ien.pre_elementary_level import ENTITY_pronoun as hac_EntityPronoun
-    from HAC_dict.xi_ien.pre_elementary_level import FUNC_conjunction as hac_FuncConjunction
-    from HAC_dict.xi_ien.pre_elementary_level import FUNC_inner as hac_FuncInner
-    from HAC_dict.xi_ien.pre_elementary_level import FUNC_inter as hac_FuncInter
-    from HAC_dict.xi_ien.pre_elementary_level import IDIOM as hac_Idiom
-    from HAC_dict.xi_ien.pre_elementary_level import LOCATION as hac_Location
-    from HAC_dict.xi_ien.pre_elementary_level import MODIFIER as hac_Modifier
-    from HAC_dict.xi_ien.pre_elementary_level import RANGE_locality as hac_RangeLocality
-    from HAC_dict.xi_ien.pre_elementary_level import TIME_justtime as hac_TimeJusttime
-    from HAC_dict.xi_ien.pre_elementary_level import TIME_season as hac_TimeSeason
+    from HAC_dict.xi_ien.pre_elementary_level.ACTION_verb import hac_ActionVerb as pre_elementary_hac_ActionVerb
+    from HAC_dict.xi_ien.pre_elementary_level.CLAUSE_particle import hac_ClauseParticle as pre_elementary_hac_ClauseParticle
+    from HAC_dict.xi_ien.pre_elementary_level.CLAUSE_Q import hac_ClauseQ as pre_elementary_hac_ClauseQ
+    from HAC_dict.xi_ien.pre_elementary_level.ENTITY_classifier import hac_EntityClassifier as pre_elementary_hac_EntityClassifier
+    from HAC_dict.xi_ien.pre_elementary_level.ENTITY_noun import hac_EntityNoun as pre_elementary_hac_EntityNoun
+    from HAC_dict.xi_ien.pre_elementary_level.ENTITY_pronoun import hac_EntityPronoun as pre_elementary_hac_EntityPronoun
+    from HAC_dict.xi_ien.pre_elementary_level.FUNC_conjunction import hac_FuncConjunction as pre_elementary_hac_FuncConjunction
+    from HAC_dict.xi_ien.pre_elementary_level.FUNC_inner import hac_FuncInner as pre_elementary_hac_FuncInner
+    from HAC_dict.xi_ien.pre_elementary_level.FUNC_inter import hac_FuncInter as pre_elementary_hac_FuncInter
+    from HAC_dict.xi_ien.pre_elementary_level.IDIOM import hac_Idiom as pre_elementary_hac_Idiom
+    from HAC_dict.xi_ien.pre_elementary_level.LOCATION import hac_Location as pre_elementary_hac_Location
+    from HAC_dict.xi_ien.pre_elementary_level.MODIFIER import hac_Modifier as pre_elementary_hac_Modifier
+    from HAC_dict.xi_ien.pre_elementary_level.RANGE_locality import hac_RangeLocality as pre_elementary_hac_RangeLocality
+    from HAC_dict.xi_ien.pre_elementary_level.TIME_justtime import hac_TimeJusttime as pre_elementary_hac_TimeJusttime
+    from HAC_dict.xi_ien.pre_elementary_level.TIME_season import hac_TimeSeason as pre_elementary_hac_TimeSeason
+
+    from HAC_dict.xi_ien.elementary_level.ACTION_verb import hac_ActionVerb as elementary_hac_ActionVerb
+    from HAC_dict.xi_ien.elementary_level.CLAUSE_particle import hac_ClauseParticle as elementary_hac_ClauseParticle
+    from HAC_dict.xi_ien.elementary_level.CLAUSE_Q import hac_ClauseQ as elementary_hac_ClauseQ
+    from HAC_dict.xi_ien.elementary_level.ENTITY_classifier import hac_EntityClassifier as elementary_hac_EntityClassifier
+    from HAC_dict.xi_ien.elementary_level.ENTITY_noun import hac_EntityNoun as elementary_hac_EntityNoun
+    from HAC_dict.xi_ien.elementary_level.ENTITY_pronoun import hac_EntityPronoun as elementary_hac_EntityPronoun
+    from HAC_dict.xi_ien.elementary_level.FUNC_conjunction import hac_FuncConjunction as elementary_hac_FuncConjunction
+    from HAC_dict.xi_ien.elementary_level.FUNC_inner import hac_FuncInner as elementary_hac_FuncInner
+    from HAC_dict.xi_ien.elementary_level.FUNC_inter import hac_FuncInter as elementary_hac_FuncInter
+    from HAC_dict.xi_ien.elementary_level.IDIOM import hac_Idiom as elementary_hac_Idiom
+    from HAC_dict.xi_ien.elementary_level.LOCATION import hac_Location as elementary_hac_Location
+    from HAC_dict.xi_ien.elementary_level.MODIFIER import hac_Modifier as elementary_hac_Modifier
+    from HAC_dict.xi_ien.elementary_level.RANGE_locality import hac_RangeLocality as elementary_hac_RangeLocality
+    from HAC_dict.xi_ien.elementary_level.TIME_justtime import hac_TimeJusttime as elementary_hac_TimeJusttime
+    from HAC_dict.xi_ien.elementary_level.TIME_season import hac_TimeSeason as elementary_hac_TimeSeason
 
     from IreneHAKKA_dict.ACTION_eventQuantifier import DT_ActionEventQuantifier
     from IreneHAKKA_dict.ACTION_lightVerb import DT_ActionLightVerb
@@ -53,21 +69,37 @@ try:
     from IreneHAKKA_dict.RANGE_Locality import DT_RangeLocality
 
 except:
-    from .HAC_dict.xi_ien.pre_elementary_level.ACTION_verb import hac_ActionVerb
-    from .HAC_dict.xi_ien.pre_elementary_level.CLAUSE_particle import hac_ClauseParticle
-    from .HAC_dict.xi_ien.pre_elementary_level.CLAUSE_Q import hac_ClauseQ
-    from .HAC_dict.xi_ien.pre_elementary_level.ENTITY_classifier import hac_EntityClassifier
-    from .HAC_dict.xi_ien.pre_elementary_level.ENTITY_noun import hac_EntityNoun
-    from .HAC_dict.xi_ien.pre_elementary_level.ENTITY_pronoun import hac_EntityPronoun
-    from .HAC_dict.xi_ien.pre_elementary_level.FUNC_conjunction import hac_FuncConjunction
-    from .HAC_dict.xi_ien.pre_elementary_level.FUNC_inner import hac_FuncInner
-    from .HAC_dict.xi_ien.pre_elementary_level.FUNC_inter import hac_FuncInter
-    from .HAC_dict.xi_ien.pre_elementary_level.IDIOM import hac_Idiom
-    from .HAC_dict.xi_ien.pre_elementary_level.LOCATION import hac_Location
-    from .HAC_dict.xi_ien.pre_elementary_level.MODIFIER import hac_Modifier
-    from .HAC_dict.xi_ien.pre_elementary_level.RANGE_locality import hac_RangeLocality
-    from .HAC_dict.xi_ien.pre_elementary_level.TIME_justtime import hac_TimeJusttime
-    from .HAC_dict.xi_ien.pre_elementary_level.TIME_season import hac_TimeSeason
+    from .HAC_dict.xi_ien.pre_elementary_level.ACTION_verb import hac_ActionVerb as pre_elementary_hac_ActionVerb
+    from .HAC_dict.xi_ien.pre_elementary_level.CLAUSE_particle import hac_ClauseParticle as pre_elementary_hac_ClauseParticle
+    from .HAC_dict.xi_ien.pre_elementary_level.CLAUSE_Q import hac_ClauseQ as pre_elementary_hac_ClauseQ
+    from .HAC_dict.xi_ien.pre_elementary_level.ENTITY_classifier import hac_EntityClassifier as pre_elementary_hac_EntityClassifier
+    from .HAC_dict.xi_ien.pre_elementary_level.ENTITY_noun import hac_EntityNoun as pre_elementary_hac_EntityNoun
+    from .HAC_dict.xi_ien.pre_elementary_level.ENTITY_pronoun import hac_EntityPronoun as pre_elementary_hac_EntityPronoun
+    from .HAC_dict.xi_ien.pre_elementary_level.FUNC_conjunction import hac_FuncConjunction as pre_elementary_hac_FuncConjunction
+    from .HAC_dict.xi_ien.pre_elementary_level.FUNC_inner import hac_FuncInner as pre_elementary_hac_FuncInner
+    from .HAC_dict.xi_ien.pre_elementary_level.FUNC_inter import hac_FuncInter as pre_elementary_hac_FuncInter
+    from .HAC_dict.xi_ien.pre_elementary_level.IDIOM import hac_Idiom as pre_elementary_hac_Idiom
+    from .HAC_dict.xi_ien.pre_elementary_level.LOCATION import hac_Location as pre_elementary_hac_Location
+    from .HAC_dict.xi_ien.pre_elementary_level.MODIFIER import hac_Modifier as pre_elementary_hac_Modifier
+    from .HAC_dict.xi_ien.pre_elementary_level.RANGE_locality import hac_RangeLocality as pre_elementary_hac_RangeLocality
+    from .HAC_dict.xi_ien.pre_elementary_level.TIME_justtime import hac_TimeJusttime as pre_elementary_hac_TimeJusttime
+    from .HAC_dict.xi_ien.pre_elementary_level.TIME_season import hac_TimeSeason as pre_elementary_hac_TimeSeason
+
+    from .HAC_dict.xi_ien.elementary_level.ACTION_verb import hac_ActionVerb as elementary_hac_ActionVerb
+    from .HAC_dict.xi_ien.elementary_level.CLAUSE_particle import hac_ClauseParticle as elementary_hac_ClauseParticle
+    from .HAC_dict.xi_ien.elementary_level.CLAUSE_Q import hac_ClauseQ as elementary_hac_ClauseQ
+    from .HAC_dict.xi_ien.elementary_level.ENTITY_classifier import hac_EntityClassifier as elementary_hac_EntityClassifier
+    from .HAC_dict.xi_ien.elementary_level.ENTITY_noun import hac_EntityNoun as elementary_hac_EntityNoun
+    from .HAC_dict.xi_ien.elementary_level.ENTITY_pronoun import hac_EntityPronoun as elementary_hac_EntityPronoun
+    from .HAC_dict.xi_ien.elementary_level.FUNC_conjunction import hac_FuncConjunction as elementary_hac_FuncConjunction
+    from .HAC_dict.xi_ien.elementary_level.FUNC_inner import hac_FuncInner as elementary_hac_FuncInner
+    from .HAC_dict.xi_ien.elementary_level.FUNC_inter import hac_FuncInter as elementary_hac_FuncInter
+    from .HAC_dict.xi_ien.elementary_level.IDIOM import hac_Idiom as elementary_hac_Idiom
+    from .HAC_dict.xi_ien.elementary_level.LOCATION import hac_Location as elementary_hac_Location
+    from .HAC_dict.xi_ien.elementary_level.MODIFIER import hac_Modifier as elementary_hac_Modifier
+    from .HAC_dict.xi_ien.elementary_level.RANGE_locality import hac_RangeLocality as elementary_hac_RangeLocality
+    from .HAC_dict.xi_ien.elementary_level.TIME_justtime import hac_TimeJusttime as elementary_hac_TimeJusttime
+    from .HAC_dict.xi_ien.elementary_level.TIME_season import hac_TimeSeason as elementary_hac_TimeSeason
 
     from .IreneHAKKA_dict.ACTION_eventQuantifier import DT_ActionEventQuantifier
     from .IreneHAKKA_dict.ACTION_lightVerb import DT_ActionLightVerb
@@ -139,21 +171,21 @@ def dictCombiner():
                     "TIME_season"           : None
                     }
 
-    hacDICT = {"ACTION_verb"      : hac_ActionVerb,
-               "CLAUSE_particle"  : hac_ClauseParticle,
-               "CLAUSE_Q"         : hac_ClauseQ,
-               "ENTITY_classifier": hac_EntityClassifier,
-               "ENTITY_noun"      : hac_EntityNoun,
-               "ENTITY_pronoun"   : hac_EntityPronoun,
-               "FUNC_conjunction" : hac_FuncConjunction,
-               "FUNC_inner"       : hac_FuncInner,
-               "FUNC_inter"       : hac_FuncInter,
-               "IDIOM"            : hac_Idiom,
-               "LOCATION"         : hac_Location,
-               "MODIFIER"         : hac_Modifier,
-               "RANGE_locality"   : hac_RangeLocality,
-               "TIME_justtime"    : hac_TimeJusttime,
-               "TIME_season"      : hac_TimeSeason
+    hacDICT = {"ACTION_verb"      : pre_elementary_hac_ActionVerb.extend(elementary_hac_ActionVerb),
+               "CLAUSE_particle"  : pre_elementary_hac_ClauseParticle.extend(elementary_hac_ClauseParticle.extend),
+               "CLAUSE_Q"         : pre_elementary_hac_ClauseQ.extend(elementary_hac_ClauseQ),
+               "ENTITY_classifier": pre_elementary_hac_EntityClassifier.extend(elementary_hac_EntityClassifier),
+               "ENTITY_noun"      : pre_elementary_hac_EntityNoun.extend(elementary_hac_EntityNoun),
+               "ENTITY_pronoun"   : pre_elementary_hac_EntityPronoun.extend(elementary_hac_EntityPronoun),
+               "FUNC_conjunction" : pre_elementary_hac_FuncConjunction.extend(elementary_hac_FuncConjunction),
+               "FUNC_inner"       : pre_elementary_hac_FuncInner.extend(elementary_hac_FuncInner),
+               "FUNC_inter"       : pre_elementary_hac_FuncInter.extend(elementary_hac_FuncInter),
+               "IDIOM"            : pre_elementary_hac_Idiom.extend(elementary_hac_Idiom),
+               "LOCATION"         : pre_elementary_hac_Location.extend(elementary_hac_Location),
+               "MODIFIER"         : pre_elementary_hac_Modifier.extend(elementary_hac_Modifier),
+               "RANGE_locality"   : pre_elementary_hac_RangeLocality.extend(elementary_hac_RangeLocality),
+               "TIME_justtime"    : pre_elementary_hac_TimeJusttime.extend(elementary_hac_TimeJusttime),
+               "TIME_season"      : pre_elementary_hac_TimeSeason.extend(elementary_hac_TimeSeason)
     }
 
     DTDICT = {"ACTION_verb"           : DT_ActionVerb,
