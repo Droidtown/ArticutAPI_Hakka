@@ -1,4 +1,4 @@
-moe_TimeJusttime = ["擺把仔", 
+hac_TimeJusttime = ["擺把仔", 
                     "眼時間", 
                     "朝晨暗晡", 
                     "緊工時節", 

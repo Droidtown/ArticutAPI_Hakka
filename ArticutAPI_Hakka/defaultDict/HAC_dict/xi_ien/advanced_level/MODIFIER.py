@@ -1,4 +1,4 @@
-moe_Modifier = ["齆鼻",
+hac_Modifier = ["齆鼻",
                 "疤疤",
                 "跛啊跛仔",
                 "飽𩜰𩜰仔",

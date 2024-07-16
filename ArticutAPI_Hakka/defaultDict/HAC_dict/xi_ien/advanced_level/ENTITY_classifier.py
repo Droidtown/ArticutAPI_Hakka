@@ -1,4 +1,4 @@
-moe_EntityClassifier = ["材", 
+hac_EntityClassifier = ["材", 
                         "斛", 
                         "槓", 
                         "掖", 

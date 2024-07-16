@@ -1,1 +1,1 @@
-moe_ClauseQ = ["曾有", "敢有"]
+hac_ClauseQ = ["曾有", "敢有"]

@@ -1,4 +1,4 @@
-moe_ActionVerb = ["發子",
+hac_ActionVerb = ["發子",
                     "病子",
                     "發狂",
                     "發青瞑",

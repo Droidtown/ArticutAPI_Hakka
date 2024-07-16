@@ -1,4 +1,4 @@
-moe_ClauseQ = ["幾",
+hac_ClauseQ = ["幾",
                 "幾久",
                 "敢有",
                 "哪央時",

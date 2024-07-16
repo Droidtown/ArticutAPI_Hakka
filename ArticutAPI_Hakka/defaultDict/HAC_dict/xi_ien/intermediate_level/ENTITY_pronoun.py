@@ -1,4 +1,4 @@
-moe_EntityPronoun = ["對方", 
+hac_EntityPronoun = ["對方", 
                         "佢兜人",
                         "佢兜儕",
                         "佢等", 

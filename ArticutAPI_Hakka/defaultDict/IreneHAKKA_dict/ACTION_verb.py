@@ -1,1 +1,1 @@
-DT_ActionVerb = ["生"]
+DT_ActionVerb = []

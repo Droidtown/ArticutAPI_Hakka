@@ -1,1 +1,1 @@
-DT_FuncNegation = ["莫", "毋"]
+hac_FuncNegation = ["莫", "毋"]

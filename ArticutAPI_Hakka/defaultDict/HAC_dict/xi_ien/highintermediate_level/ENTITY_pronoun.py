@@ -1,4 +1,4 @@
-moe_EntityPronoun = ["公太",
+hac_EntityPronoun = ["公太",
                         "姨丈仔",
                         "妻舅仔", 
                         "小郎叔",

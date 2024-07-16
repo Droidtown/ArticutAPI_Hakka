@@ -1,4 +1,4 @@
-moe_FuncInter = ["比將",
+hac_FuncInter = ["比將",
                     "不管",
                     "該",
                     "係無",

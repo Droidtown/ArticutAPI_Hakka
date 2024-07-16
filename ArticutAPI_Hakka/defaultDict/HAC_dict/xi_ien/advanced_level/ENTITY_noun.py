@@ -1,4 +1,4 @@
-moe_EntityNoun = ["鴨公聲",
+hac_EntityNoun = ["鴨公聲",
                     "鴨嫲蹄",
                     "暗病",
                     "半陰陽",

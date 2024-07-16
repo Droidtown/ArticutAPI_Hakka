@@ -1,4 +1,4 @@
-moe_FuncInter = [ "故所",
+hac_FuncInter = [ "故所",
                     "因爭",
                     "因為",
                     "若係",

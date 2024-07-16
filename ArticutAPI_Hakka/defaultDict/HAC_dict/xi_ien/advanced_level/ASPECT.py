@@ -1,1 +1,1 @@
-moe_ASPECT = ["等"]
+hac_ASPECT = ["等"]

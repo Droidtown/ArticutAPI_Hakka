@@ -1,4 +1,4 @@
-moe_Modifier = ["花花",
+hac_Modifier = ["花花",
                 "自然",
                 "目珠矇",
                 "耳背背仔",

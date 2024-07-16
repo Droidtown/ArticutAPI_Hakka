@@ -1,1 +1,1 @@
-moe_FuncConjunction = ["續下來"]
+hac_FuncConjunction = ["續下來"]

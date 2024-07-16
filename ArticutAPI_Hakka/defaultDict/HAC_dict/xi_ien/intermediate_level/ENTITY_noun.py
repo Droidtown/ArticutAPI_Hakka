@@ -1,4 +1,4 @@
-moe_EntityNoun = ["雞嫲皮",
+hac_EntityNoun = ["雞嫲皮",
                     "寒毛菇",
                     "腳目珠",
                     "腳目珠仁",

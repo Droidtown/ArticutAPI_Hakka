@@ -1,1 +1,1 @@
-moe_FuncInner = ["之間"]
+hac_FuncInner = ["之間"]

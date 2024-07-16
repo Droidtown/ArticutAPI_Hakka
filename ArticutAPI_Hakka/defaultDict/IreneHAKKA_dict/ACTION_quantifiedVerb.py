@@ -1,1 +1,1 @@
-DT_ActionQuantifiedVerb = []
+DT_ActionQuantifiedVerb = [""]

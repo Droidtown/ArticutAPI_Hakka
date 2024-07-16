@@ -1,1 +1,1 @@
-moe_ClauseParticle = ["哩", "吔", "啊"]
+hac_ClauseParticle = ["哩", "吔", "啊"]

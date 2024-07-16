@@ -1,1 +1,1 @@
-moe_FuncConjunction = ["合",]
+hac_FuncConjunction = ["合",]

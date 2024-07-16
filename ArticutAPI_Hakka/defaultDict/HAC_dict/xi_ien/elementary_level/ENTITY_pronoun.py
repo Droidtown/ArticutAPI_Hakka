@@ -1,4 +1,4 @@
-moe_EntityPronoun = ["兜",
+hac_EntityPronoun = ["兜",
                     "𠊎等】", 
                     "這兜",
                     "𠊎等】", 

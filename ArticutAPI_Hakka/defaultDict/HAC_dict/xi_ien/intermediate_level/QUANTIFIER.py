@@ -1,1 +1,1 @@
-DT_Quantifier = ["歸"]
+hac_Quantifier = ["歸"]

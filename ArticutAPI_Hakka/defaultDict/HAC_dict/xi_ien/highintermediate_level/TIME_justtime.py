@@ -1,4 +1,4 @@
-moe_TimeJusttime = ["天甫光",
+hac_TimeJusttime = ["天甫光",
                     "甫白光",
                     "臨天光",
                     "斷烏",

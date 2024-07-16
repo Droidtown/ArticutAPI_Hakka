@@ -1,4 +1,4 @@
-moe_EntityNoun = ["啞仔",
+hac_EntityNoun = ["啞仔",
                     "啞眵",
                     "巴掌嫲",
                     "跛腳仔",

@@ -1,1 +1,1 @@
-DT_EntityNoun = ["嬰兒仔"]
+DT_EntityNoun = ["汗"]

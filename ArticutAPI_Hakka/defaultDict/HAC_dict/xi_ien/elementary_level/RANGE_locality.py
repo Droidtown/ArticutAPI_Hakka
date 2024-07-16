@@ -1,4 +1,4 @@
-moe_RangeLocality = ["頂",
+hac_RangeLocality = ["頂",
                         "對面",
                         "項",
                         "面頂",

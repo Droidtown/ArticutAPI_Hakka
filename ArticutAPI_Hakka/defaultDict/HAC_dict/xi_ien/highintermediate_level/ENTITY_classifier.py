@@ -1,4 +1,4 @@
-moe_EntityClassifier = ["板",
+hac_EntityClassifier = ["板",
                         "髀",
                         "座",
                         "齣",

@@ -1,4 +1,4 @@
-moe_TimeJusttime = ["年三十",
+hac_TimeJusttime = ["年三十",
                     "暗晡",
                     "時節",
                     "一駁仔",

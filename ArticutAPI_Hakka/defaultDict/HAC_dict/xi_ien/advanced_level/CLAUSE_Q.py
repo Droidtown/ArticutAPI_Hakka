@@ -1,1 +1,1 @@
-moe_ClauseQ = ["仰得時",]
+hac_ClauseQ = ["仰得時",]
