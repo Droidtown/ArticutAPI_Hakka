@@ -1,1 +1,2 @@
-DT_Aspect = []
+DT_Aspect = ["忒",
+             "核",]
