@@ -5,7 +5,7 @@ import re
 
 shiftRule =[(re.compile("((?<=</ENTITY_num>)|(?<=</QUANTIFIER>))<ENTITY_noun>身</ENTITY_noun>"),("ENTITY_noun",),("ENTITY_classifier",)),
             (re.compile("<FUNC_inter>無</FUNC_inter>((?=<ACTION_verb>)|(?=<MODIFIER>))"),("FUNC_inter",),("FUNC_negation",)),
-            (re.compile("(?<=[^<愛]</ACTION_verb>)<ACTION_verb>[好等]</ACTION_verb>"), ("ACTION_verb",), ("ASPECT",)),
+            (re.compile("(?<=[^<愛知]</ACTION_verb>)<ACTION_verb>[好等]</ACTION_verb>"), ("ACTION_verb",), ("ASPECT",)),
             (re.compile("<ACTION_verb>[當蓋]</ACTION_verb><MODIFIER>[^<]+</MODIFIER>"),("<ACTION_verb>", "</ACTION_verb><MODIFIER>", "</MODIFIER>"), ("<DegreeP>", "", "</DegreeP>")),
             (re.compile("<MODIFIER>緊</MODIFIER>(?=<ACTION_verb>)"),("MODIFIER",),("TIME_justtime",)),
             (re.compile("<FUNC_inter>無</FUNC_inter>$"),("FUNC_inter",),("CLAUSE_Q",)),
@@ -25,4 +25,19 @@ shiftRule =[(re.compile("((?<=</ENTITY_num>)|(?<=</QUANTIFIER>))<ENTITY_noun>身
             (re.compile("<ACTION_verb>斷</ACTION_verb><ASPECT>[忒核]</ASPECT>"),("</ACTION_verb><ASPECT>", "ASPECT",), ("", "ACTION_verb")),
             (re.compile("(?<=</ENTITY_num>)<ENTITY_noun>個人</ENTITY_noun>"),("<ENTITY_noun>個人</ENTITY_noun>",), ("<ENTITY_classifier>個</ENTITY_classifier><ENTITY_noun>人</ENTITY_noun>",)),
             (re.compile("(?<=</FUNC_degreeHead>)<ACTION_verb>好</ACTION_verb>"), ("ACTION_verb",), ("MODIFIER",)),
+            (re.compile("<ACTION_verb>[^<]+</ACTION_verb><MODIFIER>飽</MODIFIER>"),("</ACTION_verb><MODIFIER>","MODIFIER"), ("","ACTION_verb")),
+            (re.compile("(?<=</ACTION_verb>)<TIME_day>夜</TIME_day>"),("TIME_day",), ("ENTITY_noun",)),
+            (re.compile("<ASPECT>好</ASPECT>(?=<CLAUSE_Q>)"),("ASPECT",), ("ACTION_verb",)),
+            (re.compile("<ACTION_verb>[上下]</ACTION_verb><ENTITY_noun>禮拜</ENTITY_noun>"),("</ACTION_verb><ENTITY_noun>","ACTION_verb","ENTITY_noun"), ("","TIME_justtime","TIME_justtime")),
+            (re.compile("(<ACTION_verb>好</ACTION_verb>)<QUANTIFIER>歸</QUANTIFIER>"),("QUANTIFIER",), ("ACTION_verb",)),
+            (re.compile("(?<=</ENTITY_classifier>)<ACTION_verb>妄想</ACTION_verb>"),("ACTION_verb",), ("ENTITY_noun",)),
+            (re.compile("<FUNC_degreeHead>[恁盡]</FUNC_degreeHead>(?=<ACTION_verb>)"),("FUNC_degreeHead",), ("MODIFIER",)),
+            (re.compile("<ACTION_verb>打</ACTION_verb><ACTION_verb>結</ACTION_verb>"),("</ACTION_verb><ACTION_verb>",), ("",)),
+            (re.compile("<DegreeP>盡好</DegreeP><ACTION_verb>食</ACTION_verb>"),("DegreeP",), ("ACTION_verb",)),
+            (re.compile("(?<=擺</ENTITY_classifier>)<ACTION_verb>旅行</ACTION_verb>"),("ACTION_verb",), ("ENTITY_noun",)),
+            (re.compile("<FUNC_determiner>[^<]+</FUNC_determiner><ENTITY_classifier>[^<]+</ENTITY_classifier>"),("</FUNC_determiner><ENTITY_classifier>","FUNC_determiner","ENTITY_classifier"), ("","ENTITY_DetPhrase","ENTITY_DetPhrase")),
+            (re.compile("<ENTITY_pronoun>[^<]+</ENTITY_pronoun>(?=<ENTITY_pronoun>)"),("ENTITY_pronoun",), ("ENTITY_possessive",)),
+            (re.compile("<FUNC_degreeHead>過</FUNC_degreeHead>(?=<ACTION_verb>)"),("FUNC_degreeHead",), ("MODIFIER",)),
+            (re.compile("<FUNC_inter>無</FUNC_inter><ENTITY_noun>人</ENTITY_noun>"),("FUNC_inter",), ("FUNC_negation",)),
+
 ]
