@@ -21,6 +21,7 @@ try:
     from HAC_dict.xi_ien.pre_elementary_level.RANGE_locality import hac_RangeLocality as pre_elementary_hac_RangeLocality
     from HAC_dict.xi_ien.pre_elementary_level.TIME_justtime import hac_TimeJusttime as pre_elementary_hac_TimeJusttime
     from HAC_dict.xi_ien.pre_elementary_level.TIME_season import hac_TimeSeason as pre_elementary_hac_TimeSeason
+    from HAC_dict.xi_ien.pre_elementary_level.FUNC_determiner import hac_FuncDeterminer as pre_elementary_hac_FuncDeterminer
 
     from HAC_dict.xi_ien.elementary_level.ACTION_verb import hac_ActionVerb as elementary_hac_ActionVerb
     from HAC_dict.xi_ien.elementary_level.CLAUSE_particle import hac_ClauseParticle as elementary_hac_ClauseParticle
@@ -55,6 +56,7 @@ try:
     from HAC_dict.xi_ien.intermediate_level.RANGE_locality import hac_RangeLocality as intermediate_hac_RangeLocality
     from HAC_dict.xi_ien.intermediate_level.TIME_justtime import hac_TimeJusttime as intermediate_hac_TimeJusttime
     from HAC_dict.xi_ien.intermediate_level.TIME_season import hac_TimeSeason as intermediate_hac_TimeSeason
+    from HAC_dict.xi_ien.intermediate_level.FUNC_determiner import hac_FuncDeterminer as intermediate_hac_FuncDeterminer
 
     from HAC_dict.xi_ien.highintermediate_level.ACTION_verb import hac_ActionVerb as highintermediate_hac_ActionVerb
     from HAC_dict.xi_ien.highintermediate_level.CLAUSE_particle import hac_ClauseParticle as highintermediate_hac_ClauseParticle
@@ -72,6 +74,7 @@ try:
     from HAC_dict.xi_ien.highintermediate_level.RANGE_locality import hac_RangeLocality as highintermediate_hac_RangeLocality
     from HAC_dict.xi_ien.highintermediate_level.TIME_justtime import hac_TimeJusttime as highintermediate_hac_TimeJusttime
     from HAC_dict.xi_ien.highintermediate_level.TIME_season import hac_TimeSeason as highintermediate_hac_TimeSeason
+    from HAC_dict.xi_ien.highintermediate_level.FUNC_determiner import hac_FuncDeterminer as highintermediate_hac_FuncDeterminer
 
     from HAC_dict.xi_ien.advanced_level.ACTION_verb import hac_ActionVerb as advanced_hac_ActionVerb
     from HAC_dict.xi_ien.advanced_level.CLAUSE_particle import hac_ClauseParticle as advanced_hac_ClauseParticle
@@ -138,6 +141,7 @@ except:
     from .HAC_dict.xi_ien.pre_elementary_level.RANGE_locality import hac_RangeLocality as pre_elementary_hac_RangeLocality
     from .HAC_dict.xi_ien.pre_elementary_level.TIME_justtime import hac_TimeJusttime as pre_elementary_hac_TimeJusttime
     from .HAC_dict.xi_ien.pre_elementary_level.TIME_season import hac_TimeSeason as pre_elementary_hac_TimeSeason
+    from .HAC_dict.xi_ien.pre_elementary_level.FUNC_determiner import hac_FuncDeterminer as pre_elementary_hac_FuncDeterminer
 
     from .HAC_dict.xi_ien.elementary_level.ACTION_verb import hac_ActionVerb as elementary_hac_ActionVerb
     from .HAC_dict.xi_ien.elementary_level.CLAUSE_particle import hac_ClauseParticle as elementary_hac_ClauseParticle
@@ -172,6 +176,7 @@ except:
     from .HAC_dict.xi_ien.intermediate_level.RANGE_locality import hac_RangeLocality as intermediate_hac_RangeLocality
     from .HAC_dict.xi_ien.intermediate_level.TIME_justtime import hac_TimeJusttime as intermediate_hac_TimeJusttime
     from .HAC_dict.xi_ien.intermediate_level.TIME_season import hac_TimeSeason as intermediate_hac_TimeSeason
+    from .HAC_dict.xi_ien.intermediate_level.FUNC_determiner import hac_FuncDeterminer as intermediate_hac_FuncDeterminer
 
     from .HAC_dict.xi_ien.highintermediate_level.ACTION_verb import hac_ActionVerb as highintermediate_hac_ActionVerb
     from .HAC_dict.xi_ien.highintermediate_level.CLAUSE_particle import hac_ClauseParticle as highintermediate_hac_ClauseParticle
@@ -189,6 +194,7 @@ except:
     from .HAC_dict.xi_ien.highintermediate_level.RANGE_locality import hac_RangeLocality as highintermediate_hac_RangeLocality
     from .HAC_dict.xi_ien.highintermediate_level.TIME_justtime import hac_TimeJusttime as highintermediate_hac_TimeJusttime
     from .HAC_dict.xi_ien.highintermediate_level.TIME_season import hac_TimeSeason as highintermediate_hac_TimeSeason
+    from .HAC_dict.xi_ien.highintermediate_level.FUNC_determiner import hac_FuncDeterminer as highintermediate_hac_FuncDeterminer
 
     from .HAC_dict.xi_ien.advanced_level.ACTION_verb import hac_ActionVerb as advanced_hac_ActionVerb
     from .HAC_dict.xi_ien.advanced_level.CLAUSE_particle import hac_ClauseParticle as advanced_hac_ClauseParticle
@@ -274,7 +280,8 @@ def dictCombiner():
                     "RANGE_locality"        : None,
                     "RANGE_period"          : None,
                     "TIME_justtime"         : None,
-                    "TIME_season"           : None
+                    "TIME_season"           : None,
+                    "FUNC_determiner"       : None
                     }
 
     hacDICT = {"ACTION_verb"      : pre_elementary_hac_ActionVerb + elementary_hac_ActionVerb + intermediate_hac_ActionVerb + highintermediate_hac_ActionVerb + advanced_hac_ActionVerb,
@@ -292,7 +299,8 @@ def dictCombiner():
                "MODIFIER"         : pre_elementary_hac_Modifier + elementary_hac_Modifier + intermediate_hac_Modifier + highintermediate_hac_Modifier + advanced_hac_Modifier,
                "RANGE_locality"   : pre_elementary_hac_RangeLocality + elementary_hac_RangeLocality + intermediate_hac_RangeLocality + highintermediate_hac_RangeLocality + advanced_hac_RangeLocality,
                "TIME_justtime"    : pre_elementary_hac_TimeJusttime + elementary_hac_TimeJusttime + intermediate_hac_TimeJusttime + highintermediate_hac_TimeJusttime + advanced_hac_TimeJusttime,
-               "TIME_season"      : pre_elementary_hac_TimeSeason + elementary_hac_TimeSeason + intermediate_hac_TimeSeason + highintermediate_hac_TimeSeason + advanced_hac_TimeSeason
+               "TIME_season"      : pre_elementary_hac_TimeSeason + elementary_hac_TimeSeason + intermediate_hac_TimeSeason + highintermediate_hac_TimeSeason + advanced_hac_TimeSeason,
+               "FUNC_determiner"  : pre_elementary_hac_FuncDeterminer + intermediate_hac_FuncDeterminer + highintermediate_hac_FuncDeterminer
     }
 
     DTDICT = {"ACTION_verb"           : DT_ActionVerb,

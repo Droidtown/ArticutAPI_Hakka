@@ -1,1 +1,2 @@
-DT_EntityNoun = ["汗"]
+DT_EntityNoun = ["汗",
+                 "皮包仔"]
