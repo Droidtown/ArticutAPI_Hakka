@@ -1,1 +1,1 @@
-DT_Idiom = []
+DT_Idiom = ["七後生八後生"]

@@ -1,1 +1,1 @@
-hac_FuncNegation = []
+hac_FuncNegation = ["毋"]

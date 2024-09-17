@@ -1,1 +1,2 @@
-hac_Quantifier = ["兜"]
+hac_Quantifier = ["兜",
+                  "都"]

@@ -1,1 +1,1 @@
-DT_EntityPossessive = ["厥"]
+DT_EntityPossessive = ["厥",]

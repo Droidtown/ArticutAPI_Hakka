@@ -1,1 +1,2 @@
-hac_Idiom = []
+hac_Idiom = ["敗勢",
+             "壞勢",]

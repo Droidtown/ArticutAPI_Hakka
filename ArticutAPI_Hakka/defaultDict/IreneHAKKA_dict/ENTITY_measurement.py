@@ -1,1 +1,1 @@
-DT_EntityMeasurement = []
+DT_EntityMeasurement = ["公斤"]

@@ -1,1 +1,1 @@
-DT_EntityClassifier = []
+DT_EntityClassifier = ["一兜仔"]
