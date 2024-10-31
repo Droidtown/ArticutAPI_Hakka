@@ -1,6 +1,5 @@
 hac_EntityClassifier = ["半額",
                         "丙",
-                        "筆",
                         "枋",
                         "磅",
                         "幅",

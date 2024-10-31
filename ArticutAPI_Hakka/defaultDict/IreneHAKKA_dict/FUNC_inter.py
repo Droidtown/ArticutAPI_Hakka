@@ -1,1 +1,1 @@
-DT_FuncInter = []
+DT_FuncInter = ["無斯"]
