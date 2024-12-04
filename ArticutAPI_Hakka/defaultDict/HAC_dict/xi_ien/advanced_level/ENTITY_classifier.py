@@ -9,5 +9,4 @@ hac_EntityClassifier = ["材",
                         "樖", 
                         "條",
                         "粒",
-                        "步",
                         "掖"]
