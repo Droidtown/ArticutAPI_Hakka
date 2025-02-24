@@ -296,7 +296,7 @@ if __name__ == "__main__":
     accountDICT = {"username":accountDICT["username"], "apikey":accountDICT["apikey"]}
     articutHakka = ArticutHKK(username=accountDICT["username"], apikey=accountDICT["apikey"])
     #客語漢字 CWS/POS TEST
-    inputSTR = "菜當（蓋）多，儘採你食。"
+    inputSTR = "門口尖等盡多人，係在該排麼个？"
     #"佢轉來个時節歸身汗，就遽遽去洗身腳"
     #"略略仔發燒。"
     #"做護理師，愛有耐心。"
