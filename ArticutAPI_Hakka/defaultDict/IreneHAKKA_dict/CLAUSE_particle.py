@@ -1,1 +1,2 @@
-DT_ClauseParticle = ['吔']
+DT_ClauseParticle = ["吔",
+                     "嘓嘓"]
