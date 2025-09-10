@@ -1,1 +1,2 @@
-DT_EntityNum = []
+DT_EntityNum = ["一萬",
+                "萬",]

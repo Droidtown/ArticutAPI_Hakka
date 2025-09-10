@@ -1,3 +1,2 @@
-hac_FuncConjunction = ["也係",
-                        "抑係",
-                        "抑"]
+hac_FuncConjunction = ["抑係",
+                       "抑"]
